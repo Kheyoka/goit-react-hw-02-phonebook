@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StyledButton } from './ContactList.styled';
 
 const Contact = ({ name, number, onDeleteContactFor }) => (
   <>
     <span>{`${name}: ${number}`}</span>
-    <button type="button" onClick={onDeleteContactFor}>
+    <StyledButton type="button" onClick={onDeleteContactFor}>
       Delete
-    </button>
+    </StyledButton>
   </>
 );
 
