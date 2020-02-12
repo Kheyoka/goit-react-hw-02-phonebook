@@ -40,8 +40,9 @@ export default class App extends Component {
   };
 
   deleteContact = id => {
+    const contactId = this.state.contacts.filter(contact => contact.id !== id);
     this.setState(state => ({
-      contacts: state.contacts.filter(contact => contact.id !== id),
+      contacts: contactId,
     }));
   };
 
